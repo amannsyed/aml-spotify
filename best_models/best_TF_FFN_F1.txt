@@ -1,0 +1,9 @@
+Conf_matrix = 
+[[1253  182]
+ [  92   53]]
+
+CohensKappa = 0.1866228276186007
+
+F1 = 0.2789473684210526
+
+hyperparameters = {'input_layer_neurons': 41, 'input_layer_activation': 'relu', 'hidden_layer_neurons': [101], 'hidden_layer_activations': ['tanh'], 'weight': 'dict'}

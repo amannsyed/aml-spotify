@@ -1,0 +1,9 @@
+Conf_matrix = 
+[[1389   46]
+ [ 129   16]]
+
+CohensKappa = 0.10540960269186042
+
+F1 = 0.15458937198067632
+
+hyperparameters = {'activation': 'relu', 'hidden_layer_sizes': (121, 121)}

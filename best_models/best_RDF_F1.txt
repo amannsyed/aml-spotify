@@ -1,0 +1,9 @@
+Conf_matrix = 
+[[1009  426]
+ [  71   74]]
+
+CohensKappa = 0.1016359684246653
+
+F1 = 0.22945736434108527
+
+hyperparameters = {'max_depth': 1, 'n_estimators': 21, 'balace_type': 'balanced'}

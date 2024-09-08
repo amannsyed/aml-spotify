@@ -1,0 +1,9 @@
+Conf_matrix = 
+[[1071  364]
+ [  63   82]]
+
+CohensKappa = 0.1613296206056386
+
+F1 = 0.2774957698815567
+
+hyperparameters = {'kernel': 'rbf', 'C': 0.2, 'class_weight': 'balanced', 'probability': True}
