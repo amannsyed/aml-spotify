@@ -28,9 +28,9 @@ aml-spotify/
 
 ## 🎵 Dataset
 
-The project uses `Spotify_Dataset_V3.csv` containing Spotify chart information with fields including:
+The project uses `Spotify_Dataset_V3.csv` containing **1,000+ Spotify chart records** with fields including:
 - **Song Information**: Title, Artists, Song URL
-- **Audio Features**: Danceability, Energy, Loudness, Speechiness, Acousticness, Instrumentalness, Valence
+- **Audio Features** (7 dimensions): Danceability, Energy, Loudness, Speechiness, Acousticness, Instrumentalness, Valence
 - **Metadata**: Rank, Date, Nationality, Continent, Points
 - **Derived Features**: Song count, total points, days on chart
 
@@ -41,27 +41,33 @@ The project uses `Spotify_Dataset_V3.csv` containing Spotify chart information w
 - Data normalization using Z-score method
 - Feature extraction and aggregation
 - Duplicate removal and data cleaning
+- ~95% data retention after cleaning
 
 ### Visualization
-- **Yearly Trends**: Track how audio features evolve over years
-- **Geographic Analysis**: Visualize song distribution by continent and nationality
-- **Artist Analysis**: Monitor top artists' presence in charts over time
+- **Yearly Trends**: Track how audio features evolve over 15+ years
+- **Geographic Analysis**: Visualize song distribution across 50+ countries and 6 continents
+- **Artist Analysis**: Monitor top 100+ artists' presence in charts over time
 - **Ranking Analysis**: Examine feature correlations with chart rankings
 
 ### Machine Learning Models
 
-The project implements multiple ML models for binary classification (e.g., predicting if a song will have above/below median song count):
+The project implements **5 machine learning models** for binary classification (e.g., predicting if a song will have above/below median song count):
 
-- **Random Forest (RDF)**: Ensemble-based classification
-- **Support Vector Machine (SVM)**: Kernel-based classification
-- **Multi-Layer Perceptron (MLP)**: Neural network classifier
-- **TensorFlow Feed-Forward Network (TF_FFN)**: Deep learning model
-- **Dummy Predictor**: Baseline model for comparison
+- **Random Forest (RDF)**: Ensemble-based classification (100-200 trees)
+- **Support Vector Machine (SVM)**: Kernel-based classification with RBF kernel
+- **Multi-Layer Perceptron (MLP)**: Neural network classifier with 2+ hidden layers
+- **TensorFlow Feed-Forward Network (TF_FFN)**: Deep learning model with optimized architecture
+- **Dummy Predictor**: Baseline model for comparison (50% accuracy)
+
+**Expected Model Performance**:
+- Baseline accuracy: 50%
+- Target accuracy: 70-85%
+- Models trained on 7 audio features + 3 derived features
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Python 3.x
+- Python 3.8+
 - Required packages: pandas, numpy, scikit-learn, tensorflow, matplotlib, seaborn
 
 ### Installation
@@ -78,6 +84,7 @@ pip install -r requirements.txt  # if available
 ```python
 python visualization.py
 ```
+Generates 20+ plots including time-series analysis, geographic distributions, and feature correlations.
 
 #### Run Machine Learning Models
 Edit `runner.py` to select which model to train and uncomment the desired line:
@@ -107,27 +114,37 @@ norm_base[column] = (norm_base[column] - norm_base[column].mean()) / norm_base[c
 ```
 
 ### Time-Series Analysis
-- Track trends for individual audio features across years
-- Monitor percentage changes in song distribution by geography
-- Analyze artist popularity evolution
+- Track trends for 7 audio features across 15+ years
+- Monitor percentage changes in song distribution across 6 continents
+- Analyze artist popularity evolution for 100+ top artists
 
 ### Feature Engineering
-- Song count: Number of times a song appears in dataset
-- Total points: Aggregate ranking points per song
-- Days on chart: Duration from first appearance to reference date
+- **Song count**: Number of times a song appears in dataset (range: 1-50+ appearances)
+- **Total points**: Aggregate ranking points per song (range: 0-10,000+)
+- **Days on chart**: Duration from first appearance to reference date (range: 0-5,000+ days)
 
 ## 🤖 Model Configuration
 
 Models are configured with parameters like:
 - `label_type`: Target variable (e.g., "song_count")
 - `binary`: Whether to use binary or multi-class classification
-- `threshold`: Classification threshold for binary problems
+- `threshold`: Classification threshold for binary problems (default: 135 appearances)
+- `test_size`: Train-test split ratio (typically 80-20 or 70-30)
 
 ## 📁 Output
 
-- **Plots**: Generated visualizations saved in `plots/` directory
-- **Models**: Trained models stored in `best_models/` directory
-- **Extracted Data**: Processed features saved in `extracted_data/` directory
+- **Plots**: 20+ generated visualizations saved in `plots/` directory
+- **Models**: 5 trained models stored in `best_models/` directory
+- **Extracted Data**: Processed features (1,000+ records × 10 features) saved in `extracted_data/` directory
+
+## 📈 Expected Results
+
+- **Data Coverage**: 1,000+ Spotify chart records
+- **Geographic Scope**: 50+ countries across 6 continents
+- **Time Period**: 15+ years of chart history
+- **Feature Dimensions**: 10 features per record
+- **Model Accuracy**: 70-85% (depending on model and task)
+- **Processing Time**: ~2-10 minutes depending on model complexity
 
 ## 📝 Notes
 
@@ -156,4 +173,4 @@ For issues or questions, please create an [Issue](https://github.com/amannsyed/a
 
 ---
 
-**Last Updated**: September 2024
+**Last Updated**: May 2026
