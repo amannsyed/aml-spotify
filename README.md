@@ -28,7 +28,7 @@ aml-spotify/
 
 ## 🎵 Dataset
 
-The project uses `Spotify_Dataset_V3.csv` containing **1,000+ Spotify chart records** with fields including:
+The project uses `Spotify_Dataset_V3.csv` containing **10,000+ Spotify chart records** with fields including:
 - **Song Information**: Title, Artists, Song URL
 - **Audio Features** (7 dimensions): Danceability, Energy, Loudness, Speechiness, Acousticness, Instrumentalness, Valence
 - **Metadata**: Rank, Date, Nationality, Continent, Points
@@ -141,7 +141,7 @@ Models are configured with parameters like:
 
 - **Data Coverage**: 1,000+ Spotify chart records
 - **Geographic Scope**: 50+ countries across 6 continents
-- **Time Period**: 15+ years of chart history
+- **Time Period**: 5+ years of chart history
 - **Feature Dimensions**: 10 features per record
 - **Model Accuracy**: 70-85% (depending on model and task)
 - **Processing Time**: ~2-10 minutes depending on model complexity
