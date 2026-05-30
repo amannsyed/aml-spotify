@@ -148,7 +148,6 @@ Models are configured with parameters like:
 
 ## 📝 Notes
 
-- The repository has merge conflicts in `runner.py` that should be resolved
 - Uncomment sections in `runner.py` and `visualization.py` based on desired analysis
 - Ensure `Spotify_Dataset_V3.csv` is placed in the `datasets/` directory
 
